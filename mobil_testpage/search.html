@@ -1,0 +1,277 @@
+<!DOCTYPE html> //**************검색결과 출력 홈페이지 입니다. *****************************8
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.8.7, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.8.7, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/16-3-463x124.jpg" type="image/x-icon">
+  <meta name="description" content="Web Page Builder Description">
+  <title>search</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/datatables/data-tables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="menu cid-r9ELV3hTIq" once="menu" id="menu2-b">
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="http://www.knu.ac.kr">
+                        <img src="assets/images/16-3-463x124.jpg" alt="Mobirise" title="" style="height: 3.8rem;">
+                    </a>
+                </span>
+                
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+                    <a class="nav-link link text-black display-4" href="https://mobirise.co">
+                        Services
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-black display-4" href="https://mobirise.co">
+                        About Us
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-buttons mbr-section-btn">
+                <a class="btn btn-sm btn-primary display-4" href="tel:+1-234-567-8901">
+                    <span class="btn-icon mbri-mobile mbr-iconfont mbr-iconfont-btn">
+                    </span>
+                    +1-234-567-8901
+                </a>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section class="engine"><a href="https://mobirise.info/g">build your own site for free</a></section><section class="mbr-section content5 cid-r9KxNNR91J mbr-parallax-background" id="content5-g">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);">
+    </div>
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center mbr-bold mbr-white pb-3 mbr-fonts-style display-2">검색 결과</h2>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="mbr-section form3 cid-r9ESfQ4DRl" style="padding-top:30px;padding-bottom:30px">
+      <div class="container" >
+          <div class="row py-2 justify-content-center">
+              <div class="col-12 col-sm-8 col-lg-9" data-form-type="formoid">
+
+                  <form class="mbr-form" action="search.html" method="post">
+                      <div class="mbr-subscribe input-group">
+                          <div class="dropdown"  style="padding-right:0px">
+                              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                  검색 조건
+                                  <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#" onclick ="return false;">도서명</a></li>
+                                  <li><a href="#" onclick ="return false;">저자</a></li>
+                                  <li><a href="#" onclick ="return false;">출판사</a></li>
+                              </ul>
+                          </div>
+                          <!--이 input form에 입력한 값을 받아와서 검색으로 사용할 수 있습니다. 옆은 버튼입니다. -->
+                          <input class="form-control" type="text" name="email" placeholder="소장자료 검색">
+                          <span class="input-group-btn"><button href="" type="submit" class="btn btn-primary display-4">검색</button></span>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--게시판 테이블 출력 부분-->
+<section class="mbr-section form3 cid-r9ESfQ4DRl" style="padding-top:0px">
+
+        <div class="container scroll">
+            <table class="table table-hover" cellspacing="0" id="resultTable">
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>저자</th>
+                    <th>출판년도</th>
+                    <th>id</th>
+                    <th>재고</th>
+                </tr>
+                </thead>
+                <tbody class="panel">  <!--//실제 출력될 데이터 목록 입니다. <td></td> 사이에 목록 순서대로 입력하면되요-->
+                <tr data-toggle="collapse" data-target="#demo1" data-parent = "#resultTable">
+                    <td>1</td>
+                    <td> 데이터베이스 </td>
+                    <td>박영철</td>
+                    <td>2018</td>
+                    <td>가-2-100.51</td>
+                    <td>2</td>
+                </tr>
+                <!-- 게시판 클릭 시 나오는 내용 입니다 -->
+                <tr id="demo1" class="collapse">
+                    <td colspan="6" class="hiddenRow">
+                        <div> 경북대학교 컴퓨터학부의 박영철 교수님의 명강의를 요약한 책</div>
+                    </td>
+                </tr>
+                <!--두번째 행-->
+                <tr>
+                    <td>2</td>
+                    <td> 데이터베이스 </td>
+                    <td>박영철</td>
+                    <td>2018</td>
+                    <td>가-2-100.51</td>
+                    <td>2</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+</section>
+
+  <!--아코디언 부분 쓸까해서 아직 안 지운 것 신경 안써도 됩니다-->
+<section class="accordion1 cid-r9Kyxs8qqU" id="accordion1-i">
+
+    
+
+    
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-12 col-md-8">
+                <div class="section-head text-center space30">
+                    <h2 class="mbr-section-title pb-5 mbr-fonts-style display-2">
+                        Accordion FAQ
+                    </h2>
+                </div>
+                <div class="clearfix"></div>
+                <div id="bootstrap-accordion_11" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed text-black" data-toggle="collapse" data-core="" href="#collapse1_11" aria-expanded="false" aria-controls="collapse1">
+                                <h4 class="mbr-fonts-style display-5">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span>
+                                    What is Mobirise?
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="collapse1_11" class="panel-collapse noScroll collapse " role="tabpanel" aria-labelledby="headingOne" data-parent="#bootstrap-accordion_11">
+                            <div class="panel-body p-4">
+                                <p class="mbr-fonts-style panel-text display-7">
+                                   Mobirise is an offline app for Window and Mac to easily create small/medium websites, landing pages, online resumes and portfolios, promo sites for apps, events, services and products.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-core="" href="#collapse2_11" aria-expanded="false" aria-controls="collapse2">
+                                <h4 class="mbr-fonts-style display-5">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> Is it good for me?
+                               </h4>
+                            </a>
+                            
+                        </div>
+                        <div id="collapse2_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#bootstrap-accordion_11">
+                            <div class="panel-body p-4">
+                                <p class="mbr-fonts-style panel-text display-7">
+                                   Mobirise is perfect for non-techies who are not familiar with the intricacies of web development and for designers who prefer to work as visually as possible, without fighting with code. Also great for pro-coders for fast prototyping and small customers' projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <a role="button" class="collapsed text-black panel-title" data-toggle="collapse" data-core="" href="#collapse3_11" aria-expanded="false" aria-controls="collapse3">
+                                <h4 class="mbr-fonts-style display-5">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> Why Mobirise?
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="collapse3_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#bootstrap-accordion_11">
+                            <div class="panel-body p-4">
+                                <p class="mbr-fonts-style panel-text display-7">
+                                   Key differences from traditional builders:<br>* Minimalistic, extremely <strong>easy-to-use</strong> interface<br>* <strong>Mobile</strong>-friendliness, latest website blocks and techniques "out-the-box"<br>* <strong>Free</strong> for commercial and non-profit use</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-core="" href="#collapse4_11" aria-expanded="false" aria-controls="collapse4">
+                                <h4 class="mbr-fonts-style display-5">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> This is a accordion Title 4
+                                </h4>
+                            </a> 
+                        </div>
+                        <div id="collapse4_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#bootstrap-accordion_11">
+                            <div class="panel-body p-4">
+                                <p class="mbr-fonts-style panel-text display-7">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla ut magna vehicula libero luctus in ipsum consequat faucibus. Ut porta nulla ac dapibus convallis. Curabitur sit amet massa quam. In ut ex auctor, porta neque quis, sagittis purus. Nunc auctor gravida magna, sed efficitur tortor tristique quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFive">
+                            <a role="button" class="collapsed panel-title text-black" data-toggle="collapse" data-core="" href="#collapse5_11" aria-expanded="false" aria-controls="collapse5">
+                                <h4 class="mbr-fonts-style display-5">
+                                    <span class="sign mbr-iconfont mbri-arrow-down inactive"></span> This is a accordion Title 5
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="collapse5_11" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#bootstrap-accordion_11">
+                            <div class="panel-body p-4">
+                                <p class="mbr-fonts-style panel-text display-7">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in nulla ut magna vehicula libero luctus in ipsum consequat faucibus. Ut porta nulla ac dapibus convallis. Curabitur sit amet massa quam. In ut ex auctor, porta neque quis, sagittis purus. Nunc auctor gravida magna, sed efficitur tortor tristique quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+  <script src="assets/datatables/jquery.data-tables.min.js"></script>
+  <script src="assets/datatables/data-tables.bootstrap4.min.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+</body>
+</html>
